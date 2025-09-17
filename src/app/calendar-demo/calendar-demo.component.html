@@ -1,0 +1,22 @@
+<div class="max-w-6xl mx-auto p-lg font-sans">
+  <h1 class="text-3xl font-bold text-gray-900 mb-8 text-center">Calendar Component Demo</h1>
+  
+  <!-- Calendar Component -->
+  <div class="w-full">
+    <app-calendar class="center"
+      (dateSelected)="onDateSelected($event)">
+    </app-calendar>
+  </div>
+  
+  <!-- Booking Window Display -->
+  <div class="mt-6 text-center">
+    <div class="inline-block px-4 py-2 bg-gray-100 rounded-lg border border-gray-200">
+      <span class="text-sm font-medium text-gray-700">
+        Booking window: {{ getMinTimeInAdvanceDisplay() }} - {{ getMaxTimeOutDisplay() }}
+      </span>
+    </div>
+  </div>
+
+</div>
+
+   

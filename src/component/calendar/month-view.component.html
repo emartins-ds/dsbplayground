@@ -1,0 +1,36 @@
+<!-- Day of Week Headers -->
+<div class="calendar-weekdays">
+  <div class="weekday">S</div>
+  <div class="weekday">M</div>
+  <div class="weekday">T</div>
+  <div class="weekday">W</div>
+  <div class="weekday">T</div>
+  <div class="weekday">F</div>
+  <div class="weekday">S</div>
+</div>
+
+<!-- Calendar Grid -->
+<div class="calendar-grid" *ngIf="calendarMonth">
+  <div 
+    *ngFor="let row of getCalendarRows(); trackBy: trackByRow"
+    class="calendar-row">
+    
+    <div 
+      *ngFor="let day of row; trackBy: trackByDate"
+      class="calendar-day-wrapper"
+      [class]="getDayClasses(day)"
+      (click)="onDayClick(day)">
+      
+      <div class="day-content">
+        <span class="day-number">{{ day.date.getDate() }}</span>
+        
+        <!-- Today indicator dot -->
+        <div 
+          *ngIf="day.isToday" 
+          class="today-indicator"
+          [style.background-color]="getTodayIndicatorColor(day)">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,78 @@
+/* Typography Utilities */
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--color-text-primary);
+}
+
+/* Heading Styles */
+h1 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-bold);
+}
+
+h2 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-normal);
+}
+
+h3 {
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-normal);
+}
+
+/* Body Text Styles */
+p {
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-normal);
+}
+
+.medium {
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.lg-normal {
+  font-size: var(--text-md);
+  font-weight: var(--font-weight-normal);
+}
+  
+.lg-medium {
+  font-size: var(--text-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+/* Use for captions and small text */
+.caption-medium {
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.caption-normal {
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-normal);
+}
+
+/* Use for form labels */
+.label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Use for form input content */
+.input {
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-normal);
+}
+
+
+
+
+

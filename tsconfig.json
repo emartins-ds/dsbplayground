@@ -1,0 +1,115 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "preserve",
+    "paths": {
+      "@spartan-ng/helm/alert": [
+        "./src/component/ui/ui-alert-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/badge": [
+        "./src/component/ui/ui-badge-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/button": [
+        "./src/component/ui/ui-button-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/card": [
+        "./src/component/ui/ui-card-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/checkbox": [
+        "./src/component/ui/ui-checkbox-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/dialog": [
+        "./src/component/ui/ui-dialog-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/form-field": [
+        "./src/component/ui/ui-form-field-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/hover-card": [
+        "./src/component/ui/ui-hover-card-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/icon": [
+        "./src/component/ui/ui-icon-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/input": [
+        "./src/component/ui/ui-input-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/input-otp": [
+        "./src/component/ui/ui-input-otp-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/label": [
+        "./src/component/ui/ui-label-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/menu": [
+        "./src/component/ui/ui-menu-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/popover": [
+        "./src/component/ui/ui-popover-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/progress": [
+        "./src/component/ui/ui-progress-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/radio-group": [
+        "./src/component/ui/ui-radio-group-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/scroll-area": [
+        "./src/component/ui/ui-scroll-area-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/select": [
+        "./src/component/ui/ui-select-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/separator": [
+        "./src/component/ui/ui-separator-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/sheet": [
+        "./src/component/ui/ui-sheet-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/skeleton": [
+        "./src/component/ui/ui-skeleton-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/sonner": [
+        "./src/component/ui/ui-sonner-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/spinner": [
+        "./src/component/ui/ui-spinner-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/tabs": [
+        "./src/component/ui/ui-tabs-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/toggle": [
+        "./src/component/ui/ui-toggle-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/toggle-group": [
+        "./src/component/ui/ui-toggle-group-helm/src/index.ts"
+      ],
+      "@spartan-ng/helm/tooltip": [
+        "./src/component/ui/ui-tooltip-helm/src/index.ts"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "typeCheckHostBindings": true,
+    "strictTemplates": true
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ]
+}

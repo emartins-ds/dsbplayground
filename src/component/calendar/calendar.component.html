@@ -1,0 +1,32 @@
+<!-- Calendar Container with Header and Content -->
+<div class="w-full max-w-[500px] min-w-[358px] flex flex-col gap-2xl items-center self-stretch mx-auto">
+  <!-- Header with Month Selector and Tabs -->
+  <div class="flex justify-between items-center self-stretch">
+    <app-month-selector></app-month-selector>
+    
+    <hlm-tabs [tab]="currentView()" (tabActivated)="onTabActivated($event)">
+      <hlm-tabs-list>
+        <button hlmTabsTrigger="week">Week</button>
+        <button hlmTabsTrigger="month">Month</button>
+      </hlm-tabs-list>
+    </hlm-tabs>
+  </div>
+  
+  <!-- Tab Content -->
+  <div class="w-full">
+    <div *ngIf="currentView() === 'week'">
+      <app-week-view 
+        [calendarMonth]="calendarMonth()"
+        (daySelected)="selectDate($event)"
+        (monthChanged)="onWeekViewMonthChanged($event)">
+      </app-week-view>
+    </div>
+    
+    <div *ngIf="currentView() === 'month'">
+      <app-month-view 
+        [calendarMonth]="calendarMonth()"
+        (daySelected)="selectDate($event)">
+      </app-month-view>
+    </div>
+  </div>
+</div>

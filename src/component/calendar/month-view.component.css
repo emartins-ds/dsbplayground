@@ -1,0 +1,253 @@
+/* Day of Week Headers */
+.calendar-weekdays {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: var(--color-base-bg);
+  margin-bottom: var(--spacing-md);
+}
+
+.weekday {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  border-radius: 50%;
+  animation: fadeInDown 0.3s ease-out both;
+}
+
+/* Stagger the weekday animations */
+.weekday:nth-child(1) { animation-delay: 0s; }
+.weekday:nth-child(2) { animation-delay: 0.02s; }
+.weekday:nth-child(3) { animation-delay: 0.04s; }
+.weekday:nth-child(4) { animation-delay: 0.06s; }
+.weekday:nth-child(5) { animation-delay: 0.08s; }
+.weekday:nth-child(6) { animation-delay: 0.1s; }
+.weekday:nth-child(7) { animation-delay: 0.12s; }
+
+/* Calendar Grid */
+.calendar-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  width: 100%;
+  row-gap: var(--spacing-md);
+}
+
+.calendar-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-day-wrapper {
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  transition: background-color 0.08s ease-out, border-radius 0.08s ease-out, transform 0.08s ease-out, box-shadow 0.08s ease-out;
+  position: relative;
+  border-radius: var(--radius-lg);
+}
+
+/* Only animate current month days */
+.calendar-day-wrapper:not(.other-month) {
+  animation: bouncyExpand 0.5s ease-out both;
+}
+
+/* Stagger the current month day animations to create a wave effect */
+/* Row 1 - Top row */
+.calendar-row:nth-child(1) .calendar-day-wrapper:not(.other-month):nth-child(1) { animation-delay: 0s; }
+.calendar-row:nth-child(1) .calendar-day-wrapper:not(.other-month):nth-child(2) { animation-delay: 0.03s; }
+.calendar-row:nth-child(1) .calendar-day-wrapper:not(.other-month):nth-child(3) { animation-delay: 0.06s; }
+.calendar-row:nth-child(1) .calendar-day-wrapper:not(.other-month):nth-child(4) { animation-delay: 0.09s; }
+.calendar-row:nth-child(1) .calendar-day-wrapper:not(.other-month):nth-child(5) { animation-delay: 0.12s; }
+.calendar-row:nth-child(1) .calendar-day-wrapper:not(.other-month):nth-child(6) { animation-delay: 0.15s; }
+.calendar-row:nth-child(1) .calendar-day-wrapper:not(.other-month):nth-child(7) { animation-delay: 0.18s; }
+
+/* Row 2 */
+.calendar-row:nth-child(2) .calendar-day-wrapper:not(.other-month):nth-child(1) { animation-delay: 0.03s; }
+.calendar-row:nth-child(2) .calendar-day-wrapper:not(.other-month):nth-child(2) { animation-delay: 0.06s; }
+.calendar-row:nth-child(2) .calendar-day-wrapper:not(.other-month):nth-child(3) { animation-delay: 0.09s; }
+.calendar-row:nth-child(2) .calendar-day-wrapper:not(.other-month):nth-child(4) { animation-delay: 0.12s; }
+.calendar-row:nth-child(2) .calendar-day-wrapper:not(.other-month):nth-child(5) { animation-delay: 0.15s; }
+.calendar-row:nth-child(2) .calendar-day-wrapper:not(.other-month):nth-child(6) { animation-delay: 0.18s; }
+.calendar-row:nth-child(2) .calendar-day-wrapper:not(.other-month):nth-child(7) { animation-delay: 0.21s; }
+
+/* Row 3 */
+.calendar-row:nth-child(3) .calendar-day-wrapper:not(.other-month):nth-child(1) { animation-delay: 0.06s; }
+.calendar-row:nth-child(3) .calendar-day-wrapper:not(.other-month):nth-child(2) { animation-delay: 0.09s; }
+.calendar-row:nth-child(3) .calendar-day-wrapper:not(.other-month):nth-child(3) { animation-delay: 0.12s; }
+.calendar-row:nth-child(3) .calendar-day-wrapper:not(.other-month):nth-child(4) { animation-delay: 0.15s; }
+.calendar-row:nth-child(3) .calendar-day-wrapper:not(.other-month):nth-child(5) { animation-delay: 0.18s; }
+.calendar-row:nth-child(3) .calendar-day-wrapper:not(.other-month):nth-child(6) { animation-delay: 0.21s; }
+.calendar-row:nth-child(3) .calendar-day-wrapper:not(.other-month):nth-child(7) { animation-delay: 0.24s; }
+
+/* Row 4 */
+.calendar-row:nth-child(4) .calendar-day-wrapper:not(.other-month):nth-child(1) { animation-delay: 0.09s; }
+.calendar-row:nth-child(4) .calendar-day-wrapper:not(.other-month):nth-child(2) { animation-delay: 0.12s; }
+.calendar-row:nth-child(4) .calendar-day-wrapper:not(.other-month):nth-child(3) { animation-delay: 0.15s; }
+.calendar-row:nth-child(4) .calendar-day-wrapper:not(.other-month):nth-child(4) { animation-delay: 0.18s; }
+.calendar-row:nth-child(4) .calendar-day-wrapper:not(.other-month):nth-child(5) { animation-delay: 0.21s; }
+.calendar-row:nth-child(4) .calendar-day-wrapper:not(.other-month):nth-child(6) { animation-delay: 0.24s; }
+.calendar-row:nth-child(4) .calendar-day-wrapper:not(.other-month):nth-child(7) { animation-delay: 0.27s; }
+
+/* Row 5 */
+.calendar-row:nth-child(5) .calendar-day-wrapper:not(.other-month):nth-child(1) { animation-delay: 0.12s; }
+.calendar-row:nth-child(5) .calendar-day-wrapper:not(.other-month):nth-child(2) { animation-delay: 0.15s; }
+.calendar-row:nth-child(5) .calendar-day-wrapper:not(.other-month):nth-child(3) { animation-delay: 0.18s; }
+.calendar-row:nth-child(5) .calendar-day-wrapper:not(.other-month):nth-child(4) { animation-delay: 0.21s; }
+.calendar-row:nth-child(5) .calendar-day-wrapper:not(.other-month):nth-child(5) { animation-delay: 0.24s; }
+.calendar-row:nth-child(5) .calendar-day-wrapper:not(.other-month):nth-child(6) { animation-delay: 0.27s; }
+.calendar-row:nth-child(5) .calendar-day-wrapper:not(.other-month):nth-child(7) { animation-delay: 0.3s; }
+
+/* Row 6 - Bottom row */
+.calendar-row:nth-child(6) .calendar-day-wrapper:not(.other-month):nth-child(1) { animation-delay: 0.15s; }
+.calendar-row:nth-child(6) .calendar-day-wrapper:not(.other-month):nth-child(2) { animation-delay: 0.18s; }
+.calendar-row:nth-child(6) .calendar-day-wrapper:not(.other-month):nth-child(3) { animation-delay: 0.21s; }
+.calendar-row:nth-child(6) .calendar-day-wrapper:not(.other-month):nth-child(4) { animation-delay: 0.24s; }
+.calendar-row:nth-child(6) .calendar-day-wrapper:not(.other-month):nth-child(5) { animation-delay: 0.27s; }
+.calendar-row:nth-child(6) .calendar-day-wrapper:nth-child(6) { animation-delay: 0.3s; }
+.calendar-row:nth-child(6) .calendar-day-wrapper:not(.other-month):nth-child(7) { animation-delay: 0.33s; }
+
+/* Other Month Days - keep hidden without animation */
+.calendar-day-wrapper.other-month {
+  opacity: 0;
+}
+
+/* Day Content */
+.day-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.day-number {
+  font-size: 16px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  line-height: 1;
+  transition: color 0.08s ease-out;
+}
+
+/* Today Indicator */
+.today-indicator {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Available Days */
+.calendar-day-wrapper.availability-available {
+  background: var(--color-primary-light);
+  border-radius: var(--radius-md);
+}
+
+.calendar-day-wrapper.availability-available:hover {
+  background: var(--color-primary-light);
+  border-radius: var(--radius-full);
+}
+
+.calendar-day-wrapper.availability-available.selected {
+  background: var(--color-primary-base);
+  border-radius: var(--radius-full);
+  box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.04), 0px 1px 14px 0px rgba(0,0,0,0.04);
+  transform: scale(1.01);
+  animation: selection-focus 0.2s ease-out;
+}
+
+.calendar-day-wrapper.availability-available.selected .day-number {
+  color: var(--color-text-on-primary);
+  transition: color 0.08s ease-out;
+}
+
+/* Not Available Days */
+.calendar-day-wrapper.availability-not-available {
+  background: transparent;
+  border-radius: var(--radius-full);
+}
+
+.calendar-day-wrapper.availability-not-available .day-number {
+  color: var(--color-secondary-300);
+  text-decoration: line-through;
+  transition: color 0.08s ease-out;
+}
+
+.calendar-day-wrapper.availability-not-available:hover {
+  background: var(--color-secondary-50);
+  border-radius: var(--radius-full);
+}
+
+.calendar-day-wrapper.availability-not-available:hover .day-number {
+  color: var(--color-secondary-400);
+}
+
+.calendar-day-wrapper.availability-not-available.selected {
+  background: var(--color-secondary-200);
+  border-radius: var(--radius-full);
+  transform: scale(1.01);
+  animation: selection-focus 0.2s ease-out;
+}
+
+.calendar-day-wrapper.availability-not-available.selected .day-number {
+  color: var(--color-text-on-primary);
+  transition: color 0.08s ease-out;
+}
+
+/* Selection Focus Animation */
+@keyframes selection-focus {
+  0% { transform: scale(0.98); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1.01); }
+}
+
+/* Animation keyframes */
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bouncyExpand {
+  0% {
+    opacity: .9;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

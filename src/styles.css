@@ -1,0 +1,85 @@
+@import "tailwindcss";
+ @import '@spartan-ng/brain/hlm-tailwind-preset.css';
+@import '@angular/cdk/overlay-prebuilt.css';
+@import "./utility.css";
+
+@theme {
+  /* Primary Colors */
+  --color-primary-base: #f75f55;
+  --color-primary-dark: #c84d45;
+  --color-primary-light: #fee7e6;
+  --color-text-on-primary: #ffffff;
+
+  /* Secondary Colors */
+  --color-secondary-50: #faf9fb;
+  --color-secondary-100: #f4f3f6;
+  --color-secondary-200: #e7e6eb;
+  --color-secondary-300: #d8d6dc;
+  --color-secondary-400: #9791a1;
+  --color-secondary-500: #746d83;
+  --color-secondary-600: #5d556d;
+  --color-secondary-700: #463c58;
+  --color-secondary-800: #312745;
+  --color-secondary-900: #1a0d30;
+
+  /* Base Colors */
+  --color-base-bg: #ffffff;
+  --color-base-border: var(--color-secondary-200);
+  --color-base-input: var(--color-secondary-400);
+
+  /* Warning Colors */
+  --color-warning-light: #fef3c7;
+  --color-warning-base: #f59e0b;
+  --color-warning-dark: #8b3907;
+
+  /* Positive Colors */
+  --color-positive-light: #dcfce7;
+  --color-positive-base: #16a34a;
+  --color-positive-dark: #0c5b2a;
+
+  /* Negative Colors */
+  --color-negative-light: #fee2e2;
+  --color-negative-base: #dc2626;
+  --color-negative-dark: #951717;
+
+  /* Text Colors */
+  --color-text-primary: var(--color-secondary-900);
+  --color-text-secondary: var(--color-secondary-600);
+  --color-text-placeholder: var(--color-secondary-400);
+  --color-text-disabled: var(--color-secondary-300);
+
+  /* Spacing Tokens - 4px Grid */
+  --spacing-none: 0rem;
+  --spacing-xxs: 0.125rem;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 0.75rem;
+  --spacing-lg: 1rem;
+  --spacing-xl: 1.25rem;
+  --spacing-2xl: 1.5rem;
+  --spacing-3xl: 2rem;
+  --spacing-4xl: 3rem;
+
+  /* Border Radius Tokens */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-full: 3.125rem;
+
+  /* Font Size Tokens */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+
+  /* Font Weight Tokens */
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Shadow Tokens */
+  --shadow-selected: 0 1px 8px #0000000a, 0 1px 14px #0000000a;
+  --shadow-bottom-sheet: 0 -8px 10px -5px #0000000a, 0 -1px 3px #0000000d;
+}
+

@@ -1,0 +1,30 @@
+<div class="week-view-container">
+  <!-- Horizontal Days Container -->
+  <div class="week-days-container">
+    <div class="week-days-scroll" 
+         #scrollContainer
+         #scrollContainerRef>
+      <div 
+        *ngFor="let day of getCurrentWeekDays(); trackBy: trackByDate"
+        class="week-day-wrapper"
+        [class]="getDayClasses(day)"
+        (click)="onDayClick(day)">
+        
+        <div class="week-day-content">
+          <!-- Day of Week -->
+          <div class="day-of-week">{{ day.date | date:'EEE' }}</div>
+          
+          <!-- Day Number -->
+          <div class="day-number">{{ day.date.getDate() }}</div>
+          
+          <!-- Today indicator dot -->
+          <div 
+            *ngIf="day.isToday" 
+            class="today-indicator"
+            [style.background-color]="getTodayIndicatorColor(day)">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

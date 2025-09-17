@@ -1,0 +1,610 @@
+<!-- Test Alert Component -->
+<div class="p-4">
+  <div hlmAlert variant="default" class="mt-4">
+    <fa-icon hlm hlmAlertIcon [icon]="faInfoCircle" />
+    <h4 hlmAlertTitle>This is a default alert</h4>
+    <div hlmAlertDescription>This is an alert with outline icon, title and description.</div>
+  </div>
+  <!-- Success alert with outline icon -->
+  <div hlmAlert variant="success" class="mt-4">
+    <fa-icon hlm hlmAlertIcon [icon]="faCheckCircle" />
+    <h4 hlmAlertTitle>Success! Your changes have been saved</h4>
+    <div hlmAlertDescription>This is an alert with outline icon, title and description.</div>
+  </div>
+
+  <div hlmAlert variant="warning" class="mt-4">
+    <fa-icon hlm hlmAlertIcon [icon]="faExclamationTriangle" />
+    <h4 hlmAlertTitle>Warning: This is a warning alert</h4>
+    <div hlmAlertDescription>This is an alert with outline icon, title and description.</div>
+  </div>
+  
+  <!-- Destructive alert with Font Awesome icon -->
+  <div hlmAlert variant="destructive" class="mt-4">
+    <fa-icon hlm hlmAlertIcon [icon]="faXmarkCircle" />
+    <h4 hlmAlertTitle>This is a destructive alert</h4>
+    <div hlmAlertDescription>This is a destructive alert with a Font Awesome icon.</div>
+  </div>
+</div>
+
+<!-- Button Examples -->
+<div class="p-4 space-y-6 w-85">
+  <h2 class="text-lg font-semibold mb-4">Button Variants</h2>
+  
+  <!-- Default Variant -->
+  <div class="space-y-2">
+    <h3 class="text-md font-medium">Default Variant</h3>
+    <div class="flex flex-wrap gap-2">
+      <button hlmBtn variant="default" size="sm">Small</button>
+      <button hlmBtn variant="default">Default</button>
+      <button hlmBtn variant="default" size="lg">Large</button>
+      <button hlmBtn variant="default" size="icon">
+        <fa-icon [icon]="faCheckCircle" />
+      </button>
+    </div>
+    <button hlmBtn variant="default" size="full">Full Width Primary Button</button>
+  </div>
+
+  <!-- Secondary Variant -->
+  <div class="space-y-2">
+    <h3 class="text-md font-medium">Secondary Variant</h3>
+    <div class="flex flex-wrap gap-2">
+      <button hlmBtn variant="secondary" size="sm">Small</button>
+      <button hlmBtn variant="secondary">Default</button>
+      <button hlmBtn variant="secondary" size="lg">Large</button>
+      <button hlmBtn variant="secondary" size="icon">
+        <fa-icon [icon]="faInfoCircle" />
+      </button>
+    </div>
+    <button hlmBtn variant="secondary" size="full">Full Width Secondary Button</button>
+  </div>
+
+  <!-- Outline Variant -->
+  <div class="space-y-2">
+    <h3 class="text-md font-medium">Outline Variant</h3>
+    <div class="flex flex-wrap gap-2">
+      <button hlmBtn variant="outline" size="sm">Small</button>
+      <button hlmBtn variant="outline">Default</button>
+      <button hlmBtn variant="outline" size="lg">Large</button>
+      <button hlmBtn variant="outline" size="icon">
+        <fa-icon [icon]="faExclamationTriangle" />
+      </button>
+    </div>
+    <button hlmBtn variant="outline" size="full">Full Width Outline Button</button>
+  </div>
+
+  <!-- Ghost Variant -->
+  <div class="space-y-2">
+    <h3 class="text-md font-medium">Ghost Variant</h3>
+    <div class="flex flex-wrap gap-2">
+      <button hlmBtn variant="ghost" size="sm">Small</button>
+      <button hlmBtn variant="ghost">Default</button>
+      <button hlmBtn variant="ghost" size="lg">Large</button>
+      <button hlmBtn variant="ghost" size="icon">
+        <fa-icon [icon]="faXmarkCircle" />
+      </button>
+    </div>
+    <button hlmBtn variant="ghost" size="full">Full Width Ghost Button</button>
+  </div>
+
+  <!-- Link Variant -->
+  <div class="space-y-2">
+    <h3 class="text-md font-medium">Link Variant</h3>
+    <div class="flex flex-wrap gap-2">
+      <button hlmBtn variant="link" size="sm">Small</button>
+      <button hlmBtn variant="link">Default</button>
+      <button hlmBtn variant="link" size="lg">Large</button>
+    </div>
+    <button hlmBtn variant="link" size="full">Full Width Link Button</button>
+  </div>
+
+  <!-- Destructive Variant -->
+  <div class="space-y-2">
+    <h3 class="text-md font-medium">Destructive Variant</h3>
+    <div class="flex flex-wrap gap-2">
+      <button hlmBtn variant="destructive" size="sm">Small</button>
+      <button hlmBtn variant="destructive">Default</button>
+      <button hlmBtn variant="destructive" size="lg">Large</button>
+      <button hlmBtn variant="destructive" size="icon">
+        <fa-icon [icon]="faXmarkCircle" />
+      </button>
+    </div>
+    <button hlmBtn variant="destructive" size="full">Full Width Destructive Button</button>
+  </div>
+
+  <!-- Disabled States -->
+  <div class="space-y-2">
+    <h3 class="text-md font-medium">Disabled States</h3>
+    <div class="flex flex-wrap gap-2">
+      <button hlmBtn variant="default" disabled>Default Disabled</button>
+      <button hlmBtn variant="secondary" disabled>Secondary Disabled</button>
+      <button hlmBtn variant="outline" disabled>Outline Disabled</button>
+      <button hlmBtn variant="destructive" disabled>Destructive Disabled</button>
+    </div>
+  </div>
+
+  <!-- With Icons -->
+  <div class="space-y-2">
+    <h3 class="text-md font-medium">With Icons</h3>
+    <div class="flex flex-wrap gap-2">
+      <button hlmBtn variant="default" size="lg">
+        <fa-icon [icon]="faCheckCircle" />
+        Save Changes
+      </button>
+      <button hlmBtn variant="outline">
+        <fa-icon [icon]="faInfoCircle" />
+        Learn More
+      </button>
+      <button hlmBtn variant="destructive" size="sm">
+        <fa-icon [icon]="faXmarkCircle" />
+        Delete Item
+      </button>
+    </div>
+    <button hlmBtn variant="secondary" size="full">
+      <fa-icon [icon]="faCheckCircle" class="flex-shrink-0" />
+      <span class="truncate">This is a very long button text that will be truncated with ellipsis when it exceeds the available space</span>
+    </button>
+  </div>
+</div>
+
+<!-- Badge Examples -->
+<div class="p-4 space-y-6">
+  <h2 class="text-lg font-semibold mb-4">Badge Variants</h2>
+  
+  <!-- All Variants -->
+  <div class="space-y-2">
+    <h3 class="text-md font-medium">Badge Variants</h3>
+    <div class="flex flex-wrap gap-2">
+      <span hlmBadge variant="default">Default Badge</span>
+      <span hlmBadge variant="secondary">Secondary Badge</span>
+      <span hlmBadge variant="destructive">Destructive Badge</span>
+      <span hlmBadge variant="outline">Outline Badge</span>
+    </div>
+  </div>
+
+  <!-- Small Badges -->
+  <div class="space-y-2">
+    <h3 class="text-md font-medium">Small Badges</h3>
+    <div class="flex flex-wrap gap-2">
+      <span hlmBadge variant="default" size="sm">Small Default</span>
+      <span hlmBadge variant="secondary" size="sm">Small Secondary</span>
+      <span hlmBadge variant="destructive" size="sm">Small Destructive</span>
+      <span hlmBadge variant="outline" size="sm">Small Outline</span>
+      </div>
+      </div>
+
+  <!-- Badges with Icons -->
+  <div class="space-y-2">
+    <h3 class="text-md font-medium">Badges with Icons</h3>
+    <div class="flex flex-wrap gap-2">
+      <span hlmBadge variant="default">
+        <fa-icon [icon]="faCheckCircle" />
+        Success
+      </span>
+      <span hlmBadge variant="secondary">
+        <fa-icon [icon]="faInfoCircle" />
+        Information
+      </span>
+      <span hlmBadge variant="destructive">
+        <fa-icon [icon]="faExclamationTriangle" />
+        Warning
+      </span>
+      <span hlmBadge variant="outline">
+        <fa-icon [icon]="faXmarkCircle" />
+        Removed
+      </span>
+    </div>
+  </div>
+
+  <!-- Selectable Chips -->
+  <div class="space-y-2">
+    <h3 class="text-md font-medium">Selectable Chips</h3>
+    <div class="flex flex-wrap gap-2">
+      <span hlmBadge 
+            variant="chip" 
+            [selected]="selectedChip() === 'design'"
+            (click)="selectChip('design')"
+            class="cursor-pointer">
+        Design
+      </span>
+      <span hlmBadge 
+            variant="chip" 
+            [selected]="selectedChip() === 'development'"
+            (click)="selectChip('development')"
+            class="cursor-pointer">
+        Development
+      </span>
+      <span hlmBadge 
+            variant="chip" 
+            [selected]="selectedChip() === 'marketing'"
+            (click)="selectChip('marketing')"
+            class="cursor-pointer">
+        Marketing
+      </span>
+      <span hlmBadge 
+            variant="chip" 
+            [selected]="selectedChip() === 'support'"
+            (click)="selectChip('support')"
+            class="cursor-pointer">
+        Support
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- Card Examples -->
+<div class="p-4 space-y-6 w-100">
+  <h2 class="text-lg font-semibold mb-4">Card Components</h2>
+  
+  <div hlmCard>
+    <div hlmCardHeader>
+      <p hlmCardTitle>
+        <fa-icon [icon]="faShield" class="text-primary-dark" />
+        Cancellation Policy:
+      </p>
+    </div>
+    <div hlmCardContent>
+      <p>All appointment cancellations must be made 24 hours prior to your scheduled appointment time. Any late cancellations or missed appointments will result in a $40 charge to the card on file.</p>
+    </div>
+  </div>
+
+  <div hlmCard>
+    <div hlmCardHeader>
+      <p hlmCardTitle>
+        <fa-icon [icon]="faInfoCircle" />
+        Card Title with Icon
+      </p>
+      <p hlmCardDescription>Card Description</p>
+    </div>
+    <div hlmCardContent>
+      <p>Card content goes here.</p>
+    </div>
+    <div hlmCardFooter>
+      <button hlmCardAction>Action</button>
+    </div>
+  </div>
+
+      <!-- Long Haircut Service -->
+      <div hlmCard [selected]="isLongHaircutSelected()">
+        <div hlmCardHeader>
+          <div class="flex flex-col gap-sm">
+            <p hlmCardTitle>Long Haircut</p>
+            <div hlmCardDescription class="flex items-center gap-md">
+              <p>1 Hr</p>
+              <div class="w-0 self-stretch border-l border-base-border"></div>
+              <p class="medium text-text-primary">Starts at $85</p> 
+            </div>
+          </div>
+          <button hlmBtn 
+                   [variant]="isLongHaircutSelected() ? 'secondary' : 'default'"
+                   size="icon" 
+                   [class.rounded-full!]="isLongHaircutSelected()"
+                   data-slot="card-action"
+                   (click)="toggleLongHaircutSelection()">
+            <fa-icon [icon]="isLongHaircutSelected() ? faCheck : faPlus" />
+          </button>
+        </div>
+
+        <p hlmCardContent>Choose this option if your hair is chin to shoulder length.</p>
+      </div>
+ 
+  </div>
+
+<!-- Checkbox Examples -->
+<div class="p-4 space-y-6">
+  <h2 class="text-lg font-semibold mb-4">Checkbox Components</h2>
+  
+  <div class="flex flex-col gap-6">
+    <hlm-checkbox-with-label id="terms">
+      Accept terms and conditions
+    </hlm-checkbox-with-label>
+    
+    <hlm-checkbox-with-label id="terms-2" [checked]="true" caption="By clicking this checkbox, you agree to the terms and conditions.">
+      Accept terms and conditions
+    </hlm-checkbox-with-label>
+    
+    <hlm-checkbox-with-label id="toggle" [disabled]="true">
+      This checkbox is disabled
+    </hlm-checkbox-with-label>
+  </div>
+</div>
+
+<!-- Input Examples -->
+<div class="p-4 space-y-6 w-80">
+  <h2 class="text-lg font-semibold mb-4">Input Components</h2>
+  
+  <div class="flex flex-col gap-sm">
+    <div class="space-y-4">
+      <input hlmInput type="text" placeholder="Basic input"  />
+      <input hlmInput type="text" placeholder="Disabled input" disabled  />
+    </div>
+  </div>
+</div>
+
+<!-- Form Field Examples -->
+<div class="p-4 space-y-6 w-80">
+  <h2 class="text-lg font-semibold mb-4">Form Field Components</h2>
+  
+  <div class="flex flex-col gap-md">
+    <hlm-form-field label="Email" labelFor="email-field">
+      <input hlmInput id="email-field" type="email" placeholder="Enter your email" />
+      <hlm-hint>This is your email address.</hlm-hint>
+      <hlm-error>Please enter a valid email address.</hlm-error>
+    </hlm-form-field>
+
+    <hlm-form-field label="Password" labelFor="password-field" [required]="true">
+      <input hlmInput id="password-field" type="password" placeholder="Enter your password" />
+      <hlm-hint>We'll never share your password with anyone else.</hlm-hint>
+    </hlm-form-field>
+
+    <hlm-form-field label="Username" labelFor="username-field">
+      <input hlmInput id="username-field" type="text" />
+    </hlm-form-field>
+
+    <hlm-form-field label="Error example" labelFor="error-example">
+      <input hlmInput id="error-example" type="text" [formControl]="errorTestControl" />
+      <hlm-error>This is an error message.</hlm-error>
+    </hlm-form-field>
+  </div>
+</div>
+
+<!-- Textarea Examples -->
+<div class="p-4 space-y-6 w-80">
+  <h2 class="text-lg font-semibold mb-4">Textarea Component</h2>
+  
+  <div class="flex flex-col gap-6">
+    <hlm-form-field label="Description" labelFor="description">
+      <textarea hlmInput id="description" placeholder="Enter your description here..." rows="4"></textarea>
+      <hlm-hint>Tell us more about yourself.</hlm-hint>
+    </hlm-form-field>
+
+    <hlm-form-field label="Comments" labelFor="comments">
+      <textarea hlmInput id="comments" placeholder="Enter your comments..." class="h-15 resize-none"></textarea>
+      <hlm-hint>Additional comments or notes.</hlm-hint>
+    </hlm-form-field>
+  </div>
+</div>
+
+<!-- Select Examples -->
+<div class="p-4 space-y-6 w-80">
+  <h2 class="text-lg font-semibold mb-4">Select Component</h2>
+  
+  <div class="flex flex-col gap-6">
+    <hlm-form-field label="Country" labelFor="country">
+      <brn-select id="country" placeholder="Select a country">
+        <hlm-select-trigger class="w-full">
+          <hlm-select-value />
+        </hlm-select-trigger>
+        <hlm-select-content>
+          <hlm-option value="us">United States</hlm-option>
+          <hlm-option value="ca">Canada</hlm-option>
+          <hlm-option value="uk">United Kingdom</hlm-option>
+          <hlm-option value="au">The longest country name in the world</hlm-option>
+        </hlm-select-content>
+      </brn-select>
+      <hlm-hint>Choose your country of residence.</hlm-hint>
+    </hlm-form-field>
+
+    <hlm-form-field label="Timezone" labelFor="timezone">
+      <brn-select id="timezone" placeholder="Select a timezone">
+        <hlm-select-trigger class="w-full" size="sm">
+          <hlm-select-value />
+        </hlm-select-trigger>
+        <hlm-select-content class="max-h-48">
+          <hlm-select-scroll-up />
+          
+          <hlm-select-group>
+            <hlm-select-label>North America</hlm-select-label>
+            <hlm-option value="est">Eastern Standard Time (EST)</hlm-option>
+            <hlm-option value="cst">Central Standard Time (CST)</hlm-option>
+            <hlm-option value="mst">Mountain Standard Time (MST)</hlm-option>
+            <hlm-option value="pst">Pacific Standard Time (PST)</hlm-option>
+          </hlm-select-group>
+
+          <hlm-select-group>
+            <hlm-select-label>Europe & Africa</hlm-select-label>
+            <hlm-option value="gmt">Greenwich Mean Time (GMT)</hlm-option>
+            <hlm-option value="cet">Central European Time (CET)</hlm-option>
+            <hlm-option value="eet">Eastern European Time (EET)</hlm-option>
+            <hlm-option value="west">Western European Summer Time (WEST)</hlm-option>
+          </hlm-select-group>
+
+          <hlm-select-group>
+            <hlm-select-label>Asia & Pacific</hlm-select-label>
+            <hlm-option value="ist">India Standard Time (IST)</hlm-option>
+            <hlm-option value="cst_china">China Standard Time (CST)</hlm-option>
+            <hlm-option value="jst">Japan Standard Time (JST)</hlm-option>
+            <hlm-option value="aest">Australian Eastern Standard Time (AEST)</hlm-option>
+          </hlm-select-group>
+
+          <hlm-select-scroll-down />
+        </hlm-select-content>
+      </brn-select>
+      <hlm-hint>Choose your timezone for scheduling.</hlm-hint>
+    </hlm-form-field>
+
+    <hlm-form-field label="Action" labelFor="action">
+      <brn-select id="action" placeholder="Select an action">
+        <hlm-select-trigger class="w-full">
+          <hlm-select-value />
+        </hlm-select-trigger>
+        <hlm-select-content>
+          <hlm-option value="refresh">
+            <fa-icon [icon]="faCheckCircle" class="text-green-500" />
+            Refresh
+          </hlm-option>
+          <hlm-option value="settings">
+            <fa-icon [icon]="faInfoCircle" class="text-blue-500" />
+            Settings
+          </hlm-option>
+          <hlm-option value="help">
+            <fa-icon [icon]="faExclamationTriangle" class="text-yellow-500" />
+            Help
+          </hlm-option>
+          <hlm-option value="signout">
+            <fa-icon [icon]="faXmarkCircle" class="text-red-500" />
+            Sign out
+          </hlm-option>
+        </hlm-select-content>
+      </brn-select>
+      <hlm-hint>Choose an action to perform.</hlm-hint>
+    </hlm-form-field>
+
+  </div>
+</div>
+
+<!-- Sheet Examples -->
+<div class="p-4 space-y-6">
+  <h2 class="text-lg font-semibold mb-4">Sheet Components</h2>
+  
+  <div class="flex gap-4">
+    <!-- Login Sheet -->
+    <hlm-sheet side="bottom" #loginSheet>
+      <button hlmBtn variant="outline" (click)="openLoginSheetWithDelay()">Open Login Sheet</button>
+      <hlm-sheet-content *brnSheetContent="let ctx" class="w-full sm:w-[200px] md:w-[500px] lg:w-[500px] left-1/2 -translate-x-1/2">
+        <hlm-sheet-header>
+          <p class="lg-medium" hlmSheetTitle>Log In</p>
+        </hlm-sheet-header>
+        <div class="grid flex-1 auto-rows-min gap-6 px-4 py-6">
+          <hlm-form-field label="Email" labelFor="login-email" [required]="true">
+            <input hlmInput id="login-email" type="email" placeholder="Enter your email" class="w-full" />
+          </hlm-form-field>
+          
+          <hlm-form-field label="Password" labelFor="login-password" [required]="true">
+            <input hlmInput id="login-password" type="password" placeholder="Enter your password" class="w-full" />
+          </hlm-form-field>
+        </div>
+        <hlm-sheet-footer>
+          <button hlmBtn size="full">Log In</button>
+          <button hlmBtn size="full" variant="outline">Sign Up</button>
+        </hlm-sheet-footer>
+      </hlm-sheet-content>
+    </hlm-sheet>
+
+    <!-- Account Creation Sheet -->
+    <hlm-sheet side="bottom" #accountSheet>
+      <button hlmBtn variant="outline" (click)="openAccountSheetWithDelay()">Open Account Creation Sheet</button>
+      <hlm-sheet-content *brnSheetContent="let ctx">
+        <hlm-sheet-header>
+          <h3 hlmSheetTitle>Create Account</h3>
+        </hlm-sheet-header>
+        <div class="grid flex-1 auto-rows-min gap-6 px-4 py-6 max-h-[70vh] overflow-y-auto">
+          <!-- Personal Information -->
+          <div class="grid grid-cols-2 gap-4">
+            <hlm-form-field label="First Name" labelFor="first-name" [required]="true">
+              <input hlmInput id="first-name" placeholder="First name" class="w-full" />
+            </hlm-form-field>
+            
+            <hlm-form-field label="Last Name" labelFor="last-name" [required]="true">
+              <input hlmInput id="last-name" placeholder="Last name" class="w-full" />
+            </hlm-form-field>
+          </div>
+          
+          <hlm-form-field label="Email" labelFor="create-email" [required]="true">
+            <input hlmInput id="create-email" type="email" placeholder="Enter your email" class="w-full" />
+          </hlm-form-field>
+          
+          <hlm-form-field label="Password" labelFor="create-password" [required]="true">
+            <input hlmInput id="create-password" type="password" placeholder="Create a password" class="w-full" />
+          </hlm-form-field>
+          
+          <!-- Address Fields -->
+          <hlm-form-field label="Street Address" labelFor="street-address" [required]="true">
+            <input hlmInput id="street-address" placeholder="Street address" class="w-full" />
+          </hlm-form-field>
+          
+          <div class="grid grid-cols-3 gap-4">
+            <hlm-form-field label="City" labelFor="city" [required]="true">
+              <input hlmInput id="city" placeholder="City" class="w-full" />
+            </hlm-form-field>
+          
+            
+            <hlm-form-field label="ZIP Code" labelFor="zip-code" [required]="true">
+              <input hlmInput id="zip-code" placeholder="ZIP code" class="w-full" />
+            </hlm-form-field>
+          </div>
+          
+          <!-- Communication Preferences -->
+          <div class="space-y-4">
+            <h4 class="text-md font-medium">Communication Preferences</h4>
+            
+            <div class="space-y-3">
+              <div class="flex items-start space-x-3">
+                <hlm-checkbox-with-label 
+                  id="phone-updates" 
+                  caption="Receive phone calls for appointment reminders and changes">
+                  Appointment Updates via Phone
+                </hlm-checkbox-with-label>
+              </div>
+              
+              <div class="flex items-start space-x-3">
+                <hlm-checkbox-with-label 
+                  id="phone-promotions" 
+                  caption="Receive phone calls about special offers and promotions">
+                  Promotions via Phone
+                </hlm-checkbox-with-label>
+              </div>
+              
+              <div class="flex items-start space-x-3">
+                <hlm-checkbox-with-label 
+                  id="email-communications" 
+                  caption="Receive emails about updates and promotional offers">
+                  Updates and Promotions via Email
+                </hlm-checkbox-with-label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hlm-sheet-footer>
+          <button hlmBtn class="w-full">Create Account</button>
+        </hlm-sheet-footer>
+      </hlm-sheet-content>
+    </hlm-sheet>
+
+  </div>
+</div>
+
+<!-- Left Sheet Example - At root level, outside all containers -->
+<hlm-sheet side="left" #leftSheet>
+      <button hlmBtn variant="outline" (click)="openLeftSheetWithDelay()">Open Left Sheet</button>
+  <hlm-sheet-content *brnSheetContent="let ctx">
+    <hlm-sheet-header>
+      <h3 hlmSheetTitle>Left Side Sheet</h3>
+      <p hlmSheetDescription>This sheet slides in from the left side of the screen.</p>
+    </hlm-sheet-header>
+    <div class="grid flex-1 auto-rows-min gap-6 px-4 py-6">
+      <div class="space-y-4">
+        <h4 class="text-md font-medium">Quick Actions</h4>
+        <div class="space-y-3">
+          <button hlmBtn variant="outline" class="w-full justify-start">
+            <fa-icon [icon]="faCheckCircle" class="mr-2" />
+            View Profile
+          </button>
+          <button hlmBtn variant="outline" class="w-full justify-start">
+            <fa-icon [icon]="faInfoCircle" class="mr-2" />
+            Settings
+          </button>
+          <button hlmBtn variant="outline" class="w-full justify-start">
+            <fa-icon [icon]="faShield" class="mr-2" />
+            Security
+          </button>
+          <button hlmBtn variant="outline" class="w-full justify-start">
+            <fa-icon [icon]="faExclamationTriangle" class="mr-2" />
+            Help & Support
+          </button>
+        </div>
+      </div>
+      
+      <div class="space-y-4">
+        <h4 class="text-md font-medium">Recent Activity</h4>
+        <div class="space-y-2 text-sm text-text-secondary">
+          <p>• Profile updated 2 hours ago</p>
+          <p>• Password changed yesterday</p>
+          <p>• Login from new device</p>
+        </div>
+      </div>
+    </div>
+    <hlm-sheet-footer>
+      <button hlmBtn variant="outline" class="w-full">Close</button>
+    </hlm-sheet-footer>
+  </hlm-sheet-content>
+</hlm-sheet>

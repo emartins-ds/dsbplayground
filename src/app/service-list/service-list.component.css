@@ -1,0 +1,95 @@
+/* Custom styles for service list component */
+:host {
+  display: block;
+}
+
+/* Custom color variables to match Figma design */
+:root {
+  --color-primary: #f75f55;
+  --color-primary-light: #fee7e6;
+  --color-text-primary: #1a0d30;
+  --color-text-secondary: #5d556d;
+  --color-base-border: #d8d6dc;
+  --color-base-bg: #ffffff;
+}
+
+/* Salon logo styling */
+.salon-logo {
+  background: linear-gradient(135deg, var(--color-primary), #e53e3e);
+  color: white;
+  font-weight: 700;
+}
+
+/* Service card hover effects */
+.service-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Category chip selection states */
+.category-chip {
+  transition: all 0.2s ease-in-out;
+}
+
+.category-chip:hover {
+  transform: scale(1.05);
+}
+
+/* Horizontal scrolling for categories */
+.category-scroll {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.category-scroll::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/* Employee select styling */
+.employee-select {
+  border-color: var(--color-base-border);
+}
+
+.employee-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(247, 95, 85, 0.1);
+}
+
+/* Login prompt section */
+.login-prompt {
+  background-color: var(--color-primary-light);
+  border: 1px solid rgba(247, 95, 85, 0.2);
+}
+
+/* Service duration and price separator */
+.service-details-separator {
+  width: 1px;
+  height: 20px;
+  background-color: var(--color-base-border);
+}
+
+/* Add service button */
+.add-service-btn {
+  background-color: var(--color-primary);
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.add-service-btn:hover {
+  background-color: #e53e3e;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .service-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .add-service-btn {
+    align-self: flex-end;
+  }
+}
