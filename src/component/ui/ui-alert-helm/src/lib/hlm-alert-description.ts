@@ -12,7 +12,7 @@ export class HlmAlertDescription {
 	public readonly userClass = input<ClassValue>('', { alias: 'class' });
 	protected readonly _computedClass = computed(() =>
 		hlm(
-			'col-start-2 grid justify-items-start gap-1 [&_p]:leading-relaxed',
+			'col-start-2 grid justify-items-start gap-1 [&_p]:leading-relaxed text-sm caption-normal',
 			this.userClass(),
 		),
 	);

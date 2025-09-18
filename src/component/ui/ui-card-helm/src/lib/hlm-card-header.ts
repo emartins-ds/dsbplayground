@@ -12,7 +12,7 @@ export class HlmCardHeader {
 	public readonly userClass = input<ClassValue>('', { alias: 'class' });
 	protected readonly _computedClass = computed(() =>
 		hlm(
-			'@container/card-header grid auto-rows-min items-start gap-x-md gap-y-sm px-md has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-md',
+			'@container/card-header grid auto-rows-min items-center gap-x-md gap-y-sm px-md has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-md',
 			this.userClass(),
 		),
 	);

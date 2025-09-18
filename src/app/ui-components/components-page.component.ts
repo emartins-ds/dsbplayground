@@ -2,7 +2,7 @@ import { Component, signal, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faCheckCircle, faExclamationTriangle, faInfoCircle, faXmarkCircle, faShield, faCheck, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle, faExclamationTriangle, faInfoCircle, faXmarkCircle, faShield, faCheck, faPlus, faCreditCard, faFileCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { faCheckCircle as faCheckCircleOutline } from '@fortawesome/free-regular-svg-icons';
 import {
   HlmAlertDescription,
@@ -66,6 +66,8 @@ export class ComponentsPageComponent implements OnInit {
   protected readonly faShield = faShield;
   protected readonly faCheck = faCheck;
   protected readonly faPlus = faPlus;
+  protected readonly faCreditCard = faCreditCard;
+  protected readonly faFileCircleCheck = faFileCircleCheck;
   
   // Outline icons
   protected readonly faCheckCircleOutline = faCheckCircleOutline;

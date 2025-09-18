@@ -158,6 +158,7 @@
       <span hlmBadge variant="secondary">Secondary Badge</span>
       <span hlmBadge variant="destructive">Destructive Badge</span>
       <span hlmBadge variant="outline">Outline Badge</span>
+      <span hlmBadge variant="warning">Warning Badge</span>
     </div>
   </div>
 
@@ -169,6 +170,7 @@
       <span hlmBadge variant="secondary" size="sm">Small Secondary</span>
       <span hlmBadge variant="destructive" size="sm">Small Destructive</span>
       <span hlmBadge variant="outline" size="sm">Small Outline</span>
+      <span hlmBadge variant="warning" size="sm">Small Warning</span>
       </div>
       </div>
 
@@ -285,6 +287,48 @@
         </div>
 
         <p hlmCardContent>Choose this option if your hair is chin to shoulder length.</p>
+      </div>
+
+      <!-- Card with Badge Example -->
+      <div hlmCard class="border-warning-dark">
+        <div hlmCardHeader>
+          <div class="flex items-center justify-between">
+            <p hlmCardTitle>
+              <fa-icon [icon]="faCreditCard" class="text-primary-dark" />
+              Payment Details
+            </p>
+            <span hlmBadge variant="warning" size="sm">
+              <fa-icon [icon]="faFileCircleCheck" class="text-xs" />
+              Action Required
+            </span>
+          </div>
+        </div>
+        <div hlmCardContent>
+          <div hlmAlert variant="default" class="mb-md">
+            <fa-icon hlm hlmAlertIcon [icon]="faInfoCircle" />
+            <div hlmAlertDescription>A deposit is required to book your appointment. Your remaining balance will be due at the time of your appointment.</div>
+          </div>
+          <div class="flex justify-between items-center px-md py-lg my-lg border border-base-border rounded-md">
+            <span class="text-sm font-medium text-text-primary">Deposit Amount</span>
+            <span class="medium font-bold text-text-primary py-sm">$30.00</span>
+          </div>
+          <div class="space-y-md">
+            <hlm-form-field label="Card Number *" labelFor="card-number" [required]="true">
+              <input hlmInput id="card-number" type="text" placeholder="1234 5678 9012 3456" />
+            </hlm-form-field>
+            <div class="flex flex-wrap gap-md">
+              <hlm-form-field label="Security Code" labelFor="security-code" [required]="true" class="min-w-[108px] flex-1">
+                <input hlmInput id="security-code" type="text" placeholder="CVV" />
+              </hlm-form-field>
+              <hlm-form-field label="Expiration" labelFor="expiration" [required]="true" class="min-w-[108px] flex-1">
+                <input hlmInput id="expiration" type="text" placeholder="MM/YY" />
+              </hlm-form-field>
+              <hlm-form-field label="Zip Code" labelFor="zip-code" [required]="true" class="min-w-[108px] flex-1">
+                <input hlmInput id="zip-code" type="text" placeholder="12345" />
+              </hlm-form-field>
+            </div>
+          </div>
+        </div>
       </div>
  
   </div>
